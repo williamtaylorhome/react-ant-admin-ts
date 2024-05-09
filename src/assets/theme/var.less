@@ -1,0 +1,44 @@
+//Script grab variables --start
+//script-start
+/**
+Write custom less global variables here. Refer to the format. The color value is preferably in hexadecimal or rgb format, such as: #000 rgb(0,2,0)
+Because of the priority relationship, the variables of antd are placed at the bottom, and the top one has the highest priority.
+**/
+//layout
+@layout-aside-activeBg: #e6f7ff; //Sidebar selected background color
+@test                 : red; //test color
+@import "~antd/lib/style/themes/default.less";
+//script-end
+//Script grabs variables --end
+//global style
+.hide-scrollbar {
+  scrollbar-width   : none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+#root {
+  position: relative;
+}
+
+.loading-page {
+
+  width  : 100%;
+  height : 100vh;
+  z-index: 1;
+
+  .ant-spin-text {
+    margin-top: 20px;
+    font-size : 15px;
+    color     : #000;
+  }
+}
+
+.mixin-text-over() {
+  white-space  : nowrap;
+  overflow     : hidden;
+  text-overflow: ellipsis;
+}
